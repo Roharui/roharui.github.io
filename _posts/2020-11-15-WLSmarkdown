@@ -29,7 +29,7 @@ Window. 마이크로소프트에서 만들어진 현재 가장 대중적인 운�
 1. 윈도우 `PowerShell`을 엽니다. 아니면 콘솔을 관리자 모드로 열어도 괜찮아요.
 
 2. 다음 명령어를 입력합니다. 이 명령어는 `WSL`을 사용하도록 설정합니다.
-    ```terminal
+    ```
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     ```
 3. 다음 명령어를 입력합니다. 이 명령어는 `WSL`설치에 필수적인 `가상 머신 플랫폼`을 사용하도록 설정합니다.
