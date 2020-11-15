@@ -1,0 +1,94 @@
+---
+title: Window에서 linux 사용하는 법 (WSL2)
+author: Roharui
+date: 2020-11-15 16:25:00 +0800
+categories: [Blogging, Tutorial]
+tags: [linux]
+---
+
+## 개요
+
+Window. 마이크로소프트에서 만들어진 현재 가장 대중적인 운영체제중 하나입니다.
+
+그렇지만 가장 대중적이다고 해서 완벽하다고는 할수 없지요.
+
+개발자로 일하다보면 윈도우로 설치할수 없는 많은 프로그램들을 볼수 있습니다.
+
+그래서 많은 개발자들이 오픈소스 운영체제인 `linux`를 선호하지요.
+
+마이크로소프트도 이 사실을 알고 있는지 윈도우에서도 `linux`를 동작시킬수 있는 `WSL(리눅스용 윈도우 하위시스템)`을 지원합니다.
+
+개발자로써 최신기술을 놓칠수는 없죠. 한번 설치해봅시다!
+
+## 설치하기
+
+> 이 포스트는 WSL2의 설치방식입니다. 
+
+> 에러메세지나 요구사항등 더 자세한 설명을 원하신다면 [마이크로소프트 공식 홈페이지](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)를 참고 하시길 바랍니다.
+
+1. 윈도우 `PowerShell`을 엽니다. 아니면 콘솔을 관리자 모드로 열어도 괜찮아요.
+
+2. 다음 명령어를 입력합니다. 이 명령어는 `WSL`을 사용하도록 설정합니다.
+    ```terminal
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    ```
+3. 다음 명령어를 입력합니다. 이 명령어는 `WSL`설치에 필수적인 `가상 머신 플랫폼`을 사용하도록 설정합니다.
+    ```
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    ```
+
+4. Linux커널 패키지를 설치합니다. 머신의 종류에 따라 설치 파일이 다르니 주의해주세요.
+
+   * [x64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+   * [arm64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)
+
+    > 만약 설치할때 문제가 있다면 컴퓨터를 다시시작해보세요!
+
+5. WSL의 버전을 2로 설정합니다. 아래 명령어를 실행해주세요.
+    ```
+    wsl --set-default-version 2
+    ```
+    이제 환경세팅은 전부 완료되었습니다! 가장 중요한 운영체제를 설치해보죠!
+
+6. Microsoft Store을 열어 원하는 운영체제를 검색합니다. 
+
+    마이크로소프트 스토어는 윈도우 검색창에 `Microsoft Store`을 검색하면 됩니다.
+
+    ![마이크로스프트 스토어](/assets/img/wsl/micro_store.png)
+
+    스토어에서 linux를 검색하시면 WSL을 지원하는 운영체제들이 전부 나옵니다.
+
+    ![WSL지원 OS](/assets/img/wsl/linux_store.png)
+
+    전 우분투를 설치하겠습니다. 따로 선호하시는 운영체제가 있다면 그걸 설치하셔도 됩니다.
+
+    ![우분투](/assets/img/wsl/ubuntu_store.png)
+
+    설치가 완료되었다면 실행시킵시다. 첫 실행의 경우 이런식으로 계정을 설정하셔야됩니다.
+
+    ![계정](/assets/img/wsl/wsl_register.png)
+
+    계정을 전부 설치하시고 나면 짜잔! 이렇게 리눅스 콘솔을 윈도우에서 사용할수 있지요!
+
+    ![콘솔WSL](/assets/img/wsl/cmd_wsl.png)
+
+## 사용하기
+
+WSL설치에 완료하셨다면 이제 윈도우에서도 liunx 콘솔을 사용하실수 있습니다.
+
+콘솔창에서 wsl 명령어를 입력하면 바로 리눅스 콘솔로 옮길수도 있고요.
+
+![cmder](/assets/img/wsl/cmder_wsl.png)
+
+물론 `VSCode`로도 가능합니다.
+
+![vscode](/assets/img/wsl/vscode_wsl.png)
+
+> VSCode에서 WSL을 따로 지원하는 확장이 있습니다만. 
+> 이 포스트에서는 다루지 않겠습니다.
+
+## 마무리
+
+윈도우에서 리눅스를 사용할수 있다는건 큰 메리트이지만 아직 최신기술이다 보니 리눅스에서 지원하지 않는게 상당히 많습니다.
+
+그점 유의하시고 즐겁게 개발하시길 바랍니다.
