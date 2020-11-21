@@ -22,13 +22,13 @@ tags: [Deep Learning]
 
 정확히 말하자면 모듈형식으로 다운로드 할수 있는 IDE라고 하는게 정확할 거에요.
 
-![jupyter]()
+![jupyter](/assets/img/jupyter/jupyter_notebook.png)
 
 이렇게 생겼습니다. 눈치채신 분들도 있겠지만 주피터 노트북은 브라우저 상에서 작동합니다.
 
 실행된 주피터 서버가 저희가 전송한 코드들을 즉시 실행시킨후 값을 보여줍니다.
 
-![jupyter_cell]()
+![jupyter_cell](/assets/img/jupyter/jupyter_cell.png)
 
 이런식으로요. 이런 코드칸 하나하나를 전부 `Cell`이라고 합니다.
 
@@ -50,13 +50,13 @@ tags: [Deep Learning]
 
 [여기](https://www.anaconda.com/products/individual#download-section)로 들어가서 아나콘다를 설치합니다.
 
-![ananconda]()
+![ananconda](/assets/img/jupyter/anaconda.png)
 
 버전에 맞게 설치하시면 끝입니다.
 
 왜냐! 아나콘다를 설치하면 `Jupyter Notebook`은 자동으로 설치가 되거든요.
 
-![notebook]()
+![notebook](/assets/img/jupyter/window_jupyter.png)
 
 설치가 완료됬다면 시작 -> jupyter 검색하시면 프로그램이 나옵니다. 그걸 실행하면 되요.
 
