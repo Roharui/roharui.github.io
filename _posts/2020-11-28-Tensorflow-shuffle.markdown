@@ -1,7 +1,7 @@
 ---
 title: 섞인 이미지 맞추는 인공지능 - Tensorflow
 author: Roharui
-date: 2020-11-09 19:16:00 +0800
+date: 2020-11-28 20:30:00 +0800
 categories: [Blogging, Develope]
 tags: [Deep Learning]
 ---
