@@ -1,0 +1,65 @@
+---
+title: 깊이 우선 탐색, 너비 우선 탐색
+author: Roharui
+date: 2020-11-28 20:30:00 +0800
+categories: [Blogging, Tutorial]
+tags: [Algorithm]
+---
+
+## 노드 그래프
+
+```python
+graph = {
+    '1': {'3', '7'},
+    '2': {'3', '7', '8'},
+    '3': {'1', '2', '6', '7'},
+    '4': {'5', '7', '8'},
+    '5': {'4', '8'},
+    '6': {'3', '7', '8'},
+    '7': {'1', '2', '3', '4', '6', '8'},
+    '8': {'2', '4', '5', '6', '7'}
+}
+```
+
+## 깊이우선탐색(DFS) 
+
+```python
+target = ['1']
+visit = ['1']
+while target:
+    x = target.pop()
+    for i in graph[x]:
+        if not i in visit:
+            visit.append(i)
+            target.append(i)
+```
+![DFS_1](/assets/img/DBFS/DFS_1.png)
+![DFS_2](/assets/img/DBFS/DFS_2.png)
+![DFS_3](/assets/img/DBFS/DFS_3.png)
+![DFS_4](/assets/img/DBFS/DFS_4.png)
+![DFS_5](/assets/img/DBFS/DFS_5.png)
+![DFS_6](/assets/img/DBFS/DFS_6.png)
+![DFS_7](/assets/img/DBFS/DFS_7.png)
+![DFS_8](/assets/img/DBFS/DFS_8.png)
+
+## 너비우선탐색(BFS)
+
+```python
+target = ['1']
+visit = ['1']
+while target:
+    x = target.pop()
+    for i in graph[x]:
+        if not i in visit:
+            visit.append(i)
+            target.insert(0, i)
+```
+
+![BFS_1](/assets/img/DBFS/BFS_1.png)
+![BFS_2](/assets/img/DBFS/BFS_2.png)
+![BFS_3](/assets/img/DBFS/BFS_3.png)
+![BFS_4](/assets/img/DBFS/BFS_4.png)
+![BFS_5](/assets/img/DBFS/BFS_5.png)
+![BFS_6](/assets/img/DBFS/BFS_6.png)
+![BFS_7](/assets/img/DBFS/BFS_7.png)
+![BFS_8](/assets/img/DBFS/BFS_8.png)
