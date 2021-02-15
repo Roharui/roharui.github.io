@@ -1,0 +1,21 @@
+---
+title: 개발 팁 정리 - 1
+author: Roharui
+date: 2021-02-15 20:30:00 +0800
+categories: [Blogging, Tutorial]
+tags: [vscode]
+---
+
+## vscode 설정
+
+`.vscode/settings.json`에서 vscode 설정 파일을 적어넣으면 그 프로젝트에만 적용되는 설정 파일이 생성된다.
+
+## eslint
+
+`eslint`는 자바스크립트 문법에서 에러를 표시해주는 도구.
+전반적인 코딩스타일 뿐만 아니라 코드에 문제가 되는 부분을 표시해 줄수도 있다.
+
+## prettier
+
+문법과 상관없이 단순 코딩스타일만 체크해 수정해 주는 플러그인입니다.
+
